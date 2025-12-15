@@ -1,0 +1,155 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Our Products | PrintHive Kenya{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="bg-primary text-white py-16">
+    <div class="container mx-auto px-4 text-center">
+        <h1 class="text-4xl md:text-5xl font-heading font-bold mb-4">Our Products</h1>
+        <p class="text-xl opacity-90 max-w-2xl mx-auto">Explore our wide range of custom branded merchandise and
+            printing solutions.</p>
+    </div>
+</section>
+
+<!-- Products Section -->
+<section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+
+        <!-- Filter Toggle Button -->
+        <div class="text-center mb-6">
+            <button id="filter-toggle"
+                class="inline-flex items-center gap-2 bg-white border border-gray-300 px-6 py-2 rounded-full font-semibold text-primary shadow-sm hover:bg-gray-50 transition">
+                <i data-feather="filter" class="w-4 h-4"></i>
+                Filters
+                <i data-feather="chevron-down" class="w-4 h-4 transition-transform duration-300"
+                    id="filter-chevron"></i>
+            </button>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="hidden flex-wrap justify-center gap-4 mb-12 transition-all duration-300 ease-in-out"
+            id="product-filters">
+            <button
+                class="filter-btn active px-6 py-2 rounded-full border-2 border-primary bg-primary text-white font-semibold hover:bg-primary hover:text-white transition"
+                data-filter="all">
+                All
+            </button>
+            {% for category in categories %}
+            <button
+                class="filter-btn px-6 py-2 rounded-full border-2 border-primary text-primary font-semibold hover:bg-primary hover:text-white transition"
+                data-filter="{{ category.slug }}">
+                {{ category.name }}
+            </button>
+            {% endfor %}
+        </div>
+
+        <!-- Products Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="products-grid">
+            {% for product in products %}
+            <div class="product-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300"
+                data-category="{{ product.category.slug }}">
+                <div class="relative h-64 overflow-hidden">
+                    {% if product.image %}
+                    <img src="{{ product.image.url }}" alt="{{ product.title }}"
+                        class="w-full h-full object-cover transform hover:scale-105 transition duration-500">
+                    {% else %}
+                    <div class="w-full h-full bg-gray-200 flex items-center justify-center text-gray-400">
+                        <i data-feather="image" class="w-12 h-12"></i>
+                    </div>
+                    {% endif %}
+                    <div class="absolute top-4 right-4 bg-accent text-primary font-bold px-3 py-1 rounded-full text-sm">
+                        From KSh {{ product.starting_price|floatformat:0 }}
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="text-xs font-bold text-gray-500 uppercase tracking-wider">{{ product.category.name
+                            }}</span>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold mb-2">{{ product.title }}</h3>
+                    <p class="text-gray-600 mb-4 line-clamp-2">{{ product.description }}</p>
+                    <a href="{% url 'core:index' %}#contact"
+                        class="block w-full text-center bg-primary text-white font-bold py-2 rounded hover:bg-gray-800 transition">
+                        Get a Quote
+                    </a>
+                </div>
+            </div>
+            {% empty %}
+            <div class="col-span-full text-center py-12">
+                <p class="text-xl text-gray-500">No products found.</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const productCards = document.querySelectorAll('.product-card');
+        const filterToggle = document.getElementById('filter-toggle');
+        const filterContainer = document.getElementById('product-filters');
+        const filterChevron = document.getElementById('filter-chevron');
+
+        // Toggle Filters on Mobile
+        if (filterToggle) {
+            filterToggle.addEventListener('click', () => {
+                filterContainer.classList.toggle('hidden');
+                filterContainer.classList.toggle('flex');
+
+                // Rotate chevron
+                if (filterContainer.classList.contains('hidden')) {
+                    filterChevron.style.transform = 'rotate(0deg)';
+                } else {
+                    filterChevron.style.transform = 'rotate(180deg)';
+                }
+            });
+        }
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterBtns.forEach(b => {
+                    b.classList.remove('bg-primary', 'text-white');
+                    b.classList.add('text-primary');
+                });
+                // Add active class to clicked button
+                btn.classList.remove('text-primary');
+                btn.classList.add('bg-primary', 'text-white');
+
+                const filterValue = btn.getAttribute('data-filter');
+
+                productCards.forEach(card => {
+                    if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                        card.style.display = 'block';
+                        // Add a small animation effect
+                        card.animate([
+                            { opacity: 0, transform: 'scale(0.95)' },
+                            { opacity: 1, transform: 'scale(1)' }
+                        ], {
+                            duration: 300,
+                            easing: 'ease-out'
+                        });
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+
+                // On mobile, close the filter menu after selection
+                if (window.innerWidth < 768) {
+                    filterContainer.classList.add('hidden');
+                    filterContainer.classList.remove('flex');
+                    filterChevron.style.transform = 'rotate(0deg)';
+                }
+            });
+        });
+
+        // Initialize Feather icons
+        feather.replace();
+    });
+</script>
+{% endblock %}

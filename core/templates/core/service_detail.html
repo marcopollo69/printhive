@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ service.name }} - PrintHive Kenya{% endblock %}
+
+{% block content %}
+<!-- Service Hero -->
+<section class="hero-gradient text-white py-16">
+    <div class="container mx-auto px-4">
+        <div class="flex items-center mb-4">
+            <a href="{% url 'core:index' %}#services" class="text-accent hover:text-white transition">
+                <i data-feather="arrow-left" class="inline"></i> Back to Services
+            </a>
+        </div>
+        <div class="flex items-center gap-4">
+            <div class="bg-white bg-opacity-20 p-4 rounded-full">
+                <i data-feather="{{ service.icon_class }}" class="w-8 h-8"></i>
+            </div>
+            <h1 class="text-4xl font-heading font-bold">{{ service.name }}</h1>
+        </div>
+        <p class="text-xl mt-4 max-w-2xl">{{ service.description }}</p>
+    </div>
+</section>
+
+<!-- Products Grid -->
+<section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-heading font-bold text-center text-primary mb-12">Available Products</h2>
+
+        {% if products %}
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {% for product in products %}
+            <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition">
+                {% if product.image %}
+                <img src="{{ product.image.url }}" alt="{{ product.title }}"
+                    class="w-full h-48 object-cover rounded-lg mb-4">
+                {% else %}
+                <div class="w-full h-48 bg-gray-200 rounded-lg mb-4 flex items-center justify-center">
+                    <i data-feather="{{ service.icon_class }}" class="w-16 h-16 text-gray-400"></i>
+                </div>
+                {% endif %}
+                <h3 class="text-xl font-heading font-bold mb-2">{{ product.title }}</h3>
+                <p class="text-gray-600 mb-4">{{ product.description }}</p>
+                <p class="text-2xl font-bold text-accent mb-4">From KSh {{ product.starting_price|floatformat:0 }}</p>
+                <div class="flex gap-2 flex-wrap">
+                    <a href="{% url 'core:index' %}#contact"
+                        class="bg-primary text-white font-medium py-2 px-4 rounded-lg hover:bg-primary-dark transition">
+                        Request Quote
+                    </a>
+                    {% if product.unit_price %}
+                    <button type="button"
+                        class="estimate-btn bg-accent text-primary font-medium py-2 px-4 rounded-lg hover:bg-yellow-500 transition"
+                        data-title="{{ product.title }}" data-unit-price="{{ product.unit_price }}"
+                        data-min-qty="{{ product.min_quantity }}" data-product-id="{{ product.id }}">
+                        Quick Estimate
+                    </button>
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <div class="text-center py-12">
+            <i data-feather="package" class="w-16 h-16 text-gray-400 mx-auto mb-4"></i>
+            <p class="text-gray-600 text-lg">No products listed yet for this service.</p>
+            <a href="{% url 'core:index' %}#contact" class="text-primary hover:text-accent mt-2 inline-block">
+                Contact us for custom quotes
+            </a>
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-16 bg-primary text-white">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-heading font-bold mb-4">Need Something Custom?</h2>
+        <p class="text-xl mb-8">We can create exactly what you need. Tell us about your project.</p>
+        <a href="{% url 'core:index' %}#contact"
+            class="bg-accent text-primary font-bold py-3 px-8 rounded-lg hover:bg-yellow-500 transition inline-block">
+            Get a Free Quote
+        </a>
+    </div>
+</section>
+
+<!-- Pricing Calculator Modal -->
+{% include 'core/partials/estimate_modal.html' %}
+
+{% endblock %}

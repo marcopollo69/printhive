@@ -1,0 +1,106 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}PrintHive Kenya | Custom Branding & Printing Services{% endblock %}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Open+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#000000',
+                        accent: '#F1C40F',
+                    },
+                    fontFamily: {
+                        heading: ['Montserrat', 'sans-serif'],
+                        body: ['Open Sans', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="{% static 'core/css/styles.css' %}?v=1.2">
+    {% block extra_css %}{% endblock %}
+</head>
+
+<body class="font-body bg-gray-50">
+    <!-- Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="/" class="flex items-center">
+                <img src="{% static 'core/img/logo.png' %}" alt="PrintHive Kenya" class="h-[50px]">
+            </a>
+            <div class="hidden md:flex space-x-8">
+                <a href="{% url 'core:index' %}#home" class="font-medium hover:text-accent transition">Home</a>
+                <a href="{% url 'core:index' %}#services" class="font-medium hover:text-accent transition">Services</a>
+                <a href="{% url 'core:products' %}" class="font-medium hover:text-accent transition">Products</a>
+                <a href="{% url 'core:index' %}#why-us" class="font-medium hover:text-accent transition">Why Us</a>
+                <a href="{% url 'core:index' %}#pricing" class="font-medium hover:text-accent transition">Pricing</a>
+                <a href="{% url 'core:index' %}#contact" class="font-medium hover:text-accent transition">Contact</a>
+            </div>
+            <button id="menu-toggle" class="md:hidden text-primary">
+                <i data-feather="menu"></i>
+            </button>
+        </nav>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-2 px-4 shadow-lg">
+            <a href="{% url 'core:index' %}#home" class="block py-2 hover:text-accent transition">Home</a>
+            <a href="{% url 'core:index' %}#services" class="block py-2 hover:text-accent transition">Services</a>
+            <a href="{% url 'core:products' %}" class="block py-2 hover:text-accent transition">Products</a>
+            <a href="{% url 'core:index' %}#why-us" class="block py-2 hover:text-accent transition">Why Us</a>
+            <a href="{% url 'core:index' %}#pricing" class="block py-2 hover:text-accent transition">Pricing</a>
+            <a href="{% url 'core:index' %}#contact" class="block py-2 hover:text-accent transition">Contact</a>
+        </div>
+    </header>
+
+    {% block content %}{% endblock %}
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-10">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <a href="#" class="text-2xl font-heading font-bold text-white">PrintHive Kenya</a>
+                    <p class="mt-2 text-white opacity-90">Your Trusted Partner for Quality Custom Branding</p>
+                    <p class="mt-1 text-sm text-white opacity-75">Nairobi, Kenya</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="https://facebook.com/printhivekenya" target="_blank"
+                        class="hover:text-accent transition text-white opacity-80 hover:opacity-100"
+                        aria-label="Facebook">
+                        <i data-feather="facebook"></i>
+                    </a>
+                    <a href="https://instagram.com/printhive_kenya" target="_blank"
+                        class="hover:text-accent transition text-white opacity-80 hover:opacity-100"
+                        aria-label="Instagram">
+                        <i data-feather="instagram"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@printhive.ke" target="_blank"
+                        class="hover:text-accent transition text-white opacity-80 hover:opacity-100"
+                        aria-label="TikTok">
+                        <i data-feather="youtube"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-600 mt-8 pt-8 text-center text-white opacity-75">
+                <p>&copy; 2025 PrintHive Kenya. All rights reserved.</p>
+                <p class="text-sm mt-2">Developed by Ushauri Technologies</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{% static 'core/js/main.js' %}?v=1.1"></script>
+    {% block extra_js %}{% endblock %}
+</body>
+
+</html>

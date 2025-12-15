@@ -1,0 +1,320 @@
+/* PrintHive Custom Styles */
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Arial", sans-serif;
+    background-color: #f8fafc;
+}
+
+.hero-gradient {
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+}
+
+/* Improved text visibility on dark backgrounds */
+.hero-gradient p {
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-gradient h1 {
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-gradient p {
+    font-weight: 500;
+    opacity: 0.95;
+}
+
+/* =============================================
+   Hero Section - WhatsApp CTA Button
+   ============================================= */
+.hero-whatsapp-btn {
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #d97706 100%);
+    color: #1f2937;
+    border: 2px solid rgba(251, 191, 36, 0.3);
+    box-shadow: 0 4px 15px rgba(251, 191, 36, 0.3);
+    transition: all 0.3s ease;
+}
+
+.hero-whatsapp-btn:hover {
+    background: linear-gradient(135deg, #fcd34d 0%, #fbbf24 50%, #f59e0b 100%);
+    box-shadow: 0 6px 20px rgba(251, 191, 36, 0.4);
+    transform: translateY(-2px);
+}
+
+.hero-whatsapp-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 10px rgba(251, 191, 36, 0.3);
+}
+
+/* =============================================
+   Hero Image Carousel
+   ============================================= */
+.hero-carousel {
+    position: relative;
+    background-color: #1f2937;
+}
+
+.carousel-slides {
+    position: relative;
+    width: 100%;
+    /* Maintain aspect ratio to prevent layout shift */
+    aspect-ratio: 4 / 3;
+}
+
+.carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.7s ease-in-out;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+}
+
+/* Navigation Arrows */
+.carousel-arrow {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.9);
+    color: #1f2937;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.hero-carousel:hover .carousel-arrow {
+    opacity: 1;
+}
+
+.carousel-arrow:hover {
+    background: #ffffff;
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-arrow:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+/* Always show arrows on touch devices */
+@media (hover: none) and (pointer: coarse) {
+    .carousel-arrow {
+        opacity: 0.8;
+    }
+}
+
+/* Navigation Dots */
+.carousel-dots {
+    display: flex;
+    gap: 8px;
+    padding: 8px 12px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    backdrop-filter: blur(4px);
+}
+
+.carousel-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    transition: all 0.3s ease;
+}
+
+.carousel-dot:hover {
+    background: rgba(255, 255, 255, 0.5);
+    border-color: #fff;
+}
+
+.carousel-dot.active {
+    background: #fbbf24;
+    border-color: #fbbf24;
+    transform: scale(1.2);
+}
+
+/* Carousel pause indicator */
+.hero-carousel.paused .carousel-dots::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -24px;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Crect x='6' y='4' width='4' height='16'/%3E%3Crect x='14' y='4' width='4' height='16'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+}
+
+/* =============================================
+   Card Styles
+   ============================================= */
+.card {
+    background-color: white;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    max-width: 620px;
+    margin: 0 auto;
+    padding: 16px;
+    border-radius: 16px;
+}
+
+.card p:last-child {
+    margin-bottom: 0;
+}
+
+/* =============================================
+   Typography
+   ============================================= */
+h1,
+h2,
+h3,
+h4 {
+    color: #1f2937;
+}
+
+h1 {
+    font-size: 16px;
+    margin-top: 0;
+}
+
+p {
+    color: #4b5563;
+    line-height: 1.6;
+    font-size: 15px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+.text-primary-light {
+    color: #93c5fd;
+}
+
+/* =============================================
+   Mobile Responsive Adjustments
+   ============================================= */
+@media (max-width: 640px) {
+
+    /* Mobile Typography & Layout Improvements */
+    html,
+    body {
+        /* Reset zoom/scale hacks */
+        zoom: 1;
+        transform: none;
+        width: 100%;
+        overflow-x: hidden;
+        /* Prevent horizontal scroll */
+    }
+
+    /* Improve text readability on mobile */
+    p {
+        font-size: 16px;
+        /* Standard readable size */
+        line-height: 1.6;
+        color: #374151;
+        /* Gray-700 for better contrast */
+    }
+
+    h1 {
+        font-size: 28px;
+        /* Smaller headings for mobile */
+        line-height: 1.2;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    /* Container adjustments */
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    /* Reduce font size and line height for paragraph text */
+    p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    /* Ensure carousel displays correctly on mobile - Edge to Edge & Square */
+    .hero-carousel {
+        width: calc(100% + 2rem) !important;
+        /* Edge to edge */
+        margin-left: -1rem;
+        margin-right: -1rem;
+        min-height: 300px;
+        border-radius: 0;
+    }
+
+    .carousel-slides {
+        min-height: 300px;
+        /* Fallback for browsers without aspect-ratio support */
+        padding-bottom: 100%;
+        /* 1:1 Aspect Ratio */
+        height: 0;
+    }
+
+    /* For browsers that support aspect-ratio, reset the padding hack */
+    @supports (aspect-ratio: 1 / 1) {
+        .carousel-slides {
+            padding-bottom: 0;
+            height: auto;
+            aspect-ratio: 1 / 1;
+            /* Square */
+        }
+    }
+
+    .carousel-slide {
+        opacity: 0;
+    }
+
+    .carousel-slide:first-child,
+    .carousel-slide.active {
+        opacity: 1;
+    }
+
+    .carousel-arrow {
+        width: 36px;
+        height: 36px;
+        opacity: 0.9;
+        background: rgba(0, 0, 0, 0.3);
+        color: white;
+        backdrop-filter: blur(2px);
+    }
+
+    .carousel-arrow svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .carousel-dots {
+        gap: 8px;
+        padding: 8px 12px;
+    }
+
+    .carousel-dot {
+        width: 10px;
+        height: 10px;
+    }
+}

@@ -1,0 +1,37 @@
+/* PrintHive Brand Colors & Overrides for Django Unfold */
+
+/* Force removal of underlines */
+a {
+    text-decoration: none !important;
+}
+
+a:hover {
+    text-decoration: none !important;
+    opacity: 0.8;
+}
+
+/* Customizing the header color to Navy */
+.bg-primary-600 {
+    background-color: #2E5AAC !important;
+}
+
+/* Customizing buttons */
+.btn-primary {
+    background-color: #2E5AAC !important;
+    border-color: #2E5AAC !important;
+}
+
+.btn-primary:hover {
+    background-color: #1E3A8A !important;
+    /* Darker Navy */
+}
+
+/* Accent elements */
+.text-primary-600 {
+    color: #2E5AAC !important;
+}
+
+/* Gold accents for specific elements if needed */
+.accent-gold {
+    color: #F1C40F !important;
+}

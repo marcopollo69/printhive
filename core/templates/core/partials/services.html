@@ -1,0 +1,56 @@
+<!-- Services Section -->
+<section id="services" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-heading font-bold text-center text-primary mb-12">What We Create</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {% for service in services %}
+            <a href="{% url 'core:service_detail' service.slug %}" class="block group">
+                <div
+                    class="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-lg transition-all duration-300 h-full flex flex-col">
+                    <div
+                        class="bg-primary-light p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <i data-feather="{{ service.icon_class }}" class="text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold mb-2 group-hover:text-primary transition-colors">{{ service.name }}</h3>
+                    <p class="text-gray-600 mb-4 flex-grow">{{ service.description|truncatewords:15 }}</p>
+                    <!-- Learn More Link -->
+                    <div class="mt-auto pt-4 border-t border-gray-200">
+                        <span
+                            class="inline-flex items-center text-primary font-medium group-hover:text-accent transition-colors">
+                            Learn More
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform"
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+            </a>
+            {% empty %}
+            <!-- Fallback static services if database is empty -->
+            <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition">
+                <div class="bg-primary-light p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4">
+                    <i data-feather="layers" class="text-primary"></i>
+                </div>
+                <h3 class="text-xl font-heading font-bold mb-2">Custom T-Shirts & Apparel</h3>
+                <p class="text-gray-600">Quality branded clothing for teams, events, and promotions.</p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition">
+                <div class="bg-primary-light p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4">
+                    <i data-feather="coffee" class="text-primary"></i>
+                </div>
+                <h3 class="text-xl font-heading font-bold mb-2">Promotional Mugs & Drinkware</h3>
+                <p class="text-gray-600">Durable branded drinkware that keeps your brand visible.</p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition">
+                <div class="bg-primary-light p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4">
+                    <i data-feather="truck" class="text-primary"></i>
+                </div>
+                <h3 class="text-xl font-heading font-bold mb-2">Vehicle & Window Decals</h3>
+                <p class="text-gray-600">Professional boda boda and vehicle branding solutions.</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

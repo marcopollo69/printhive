@@ -1,0 +1,643 @@
+[
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$600000$RPcb1zH4JVw3gDpr7eFubH$JJd6aGpz1k5aTt/4O+0WDeg/IC6ZYbPeGX+cOGKNtQw=",
+    "last_login": "2025-12-07T11:20:42.341Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "admin@printhive.co.ke",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2025-12-07T11:17:35.199Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "ish7ej8my8872fthsf22qpzojrkjv6qf",
+  "fields": {
+    "session_data": ".eJxVjEEOgjAQRe_StWlaGNvBpXvOQKYzHYsaSCisjHdXEha6_e-9_zIDbWsZtpqXYRRzMd6cfrdE_MjTDuRO0222PE_rMia7K_ag1faz5Of1cP8OCtXyrR00SsheUDr2wZ0hcWwTIhCmwBnBaWgjBWAJUXxSdQraZMjcKaB5fwDqOThy:1vSCok:N62sva01_nymKrwmVHXDOXr43acwuk7TT1J1Gisw8XA",
+    "expire_date": "2025-12-21T11:20:42.361Z"
+  }
+},
+{
+  "model": "core.servicecategory",
+  "pk": 7,
+  "fields": {
+    "name": "Custom T-Shirts & Apparel",
+    "slug": "custom-t-shirts-apparel",
+    "description": "High-quality custom prints on t-shirts, polo shirts, and hoodies for teams, businesses, and events.",
+    "icon_class": "shirt",
+    "order": 1,
+    "is_active": true
+  }
+},
+{
+  "model": "core.servicecategory",
+  "pk": 8,
+  "fields": {
+    "name": "Promotional Mugs & Drinkware",
+    "slug": "promotional-mugs-drinkware",
+    "description": "Full-color sublimation printing on ceramic mugs for corporate gifts, events, and personal use.",
+    "icon_class": "coffee",
+    "order": 2,
+    "is_active": true
+  }
+},
+{
+  "model": "core.servicecategory",
+  "pk": 9,
+  "fields": {
+    "name": "Branded Pens & Giveaways",
+    "slug": "branded-pens-giveaways",
+    "description": "Affordable branded pens, keychains, and small gift items for high-volume marketing campaigns.",
+    "icon_class": "edit-3",
+    "order": 3,
+    "is_active": true
+  }
+},
+{
+  "model": "core.servicecategory",
+  "pk": 10,
+  "fields": {
+    "name": "Event & Sports Jerseys",
+    "slug": "event-sports-jerseys",
+    "description": "Custom printing, numbering, and player names on dry-fit/polyester sports jerseys for teams and tournaments.",
+    "icon_class": "award",
+    "order": 4,
+    "is_active": true
+  }
+},
+{
+  "model": "core.servicecategory",
+  "pk": 11,
+  "fields": {
+    "name": "Vehicle & Boda Boda Decals",
+    "slug": "vehicle-boda-boda-decals",
+    "description": "Durable vinyl decals and stickers for car doors, windows, and motorcycle (boda boda) fleet branding.",
+    "icon_class": "truck",
+    "order": 5,
+    "is_active": true
+  }
+},
+{
+  "model": "core.servicecategory",
+  "pk": 12,
+  "fields": {
+    "name": "Corporate Gifts (Umbrellas, etc.)",
+    "slug": "corporate-gifts-umbrellas-etc",
+    "description": "Branded umbrellas, notebooks, and premium gift sets for corporate clients and staff appreciation.",
+    "icon_class": "gift",
+    "order": 6,
+    "is_active": true
+  }
+},
+{
+  "model": "core.productexample",
+  "pk": 6,
+  "fields": {
+    "category": 7,
+    "title": "Basic Cotton Tee",
+    "description": "Quality cotton t-shirt with custom heat-press print. Perfect for teams, events, and promotions.",
+    "starting_price": "600.00",
+    "unit_price": "600.00",
+    "min_quantity": 1,
+    "image": "products/0c2356d9f738f780286bf0fdff4e82c1.jpg",
+    "is_featured": true,
+    "is_active": true,
+    "created_at": "2025-12-07T11:39:52.529Z"
+  }
+},
+{
+  "model": "core.productexample",
+  "pk": 7,
+  "fields": {
+    "category": 8,
+    "title": "Standard Ceramic Mug",
+    "description": "Full-color sublimation printed ceramic mug. Great for corporate gifts and events.",
+    "starting_price": "500.00",
+    "unit_price": "500.00",
+    "min_quantity": 1,
+    "image": "products/mug_sample.jpg",
+    "is_featured": true,
+    "is_active": true,
+    "created_at": "2025-12-07T11:39:52.553Z"
+  }
+},
+{
+  "model": "core.productexample",
+  "pk": 8,
+  "fields": {
+    "category": 11,
+    "title": "Medium Car Decal - Design & Install",
+    "description": "Professional vinyl decal design and installation for car doors or windows.",
+    "starting_price": "5000.00",
+    "unit_price": "5000.00",
+    "min_quantity": 1,
+    "image": "products/98948332deeacfcbfa78080ef22fad41.jpg",
+    "is_featured": true,
+    "is_active": true,
+    "created_at": "2025-12-07T11:39:52.569Z"
+  }
+},
+{
+  "model": "core.productexample",
+  "pk": 9,
+  "fields": {
+    "category": 9,
+    "title": "Plastic Promo Pen Bundle",
+    "description": "High-volume branded ballpoint pens for marketing campaigns and events.",
+    "starting_price": "300.00",
+    "unit_price": "60.00",
+    "min_quantity": 1,
+    "image": "products/89b3dafbdb7ad7d5bbefcb4b25d154d6.jpg",
+    "is_featured": true,
+    "is_active": true,
+    "created_at": "2025-12-07T11:39:52.583Z"
+  }
+},
+{
+  "model": "core.productexample",
+  "pk": 10,
+  "fields": {
+    "category": 10,
+    "title": "Polyester Sports Jersey",
+    "description": "Custom dry-fit jersey with printing, numbering, and player names.",
+    "starting_price": "1200.00",
+    "unit_price": "1200.00",
+    "min_quantity": 1,
+    "image": "products/b3e3198a855167a7610713fc5aefe92f.jpg",
+    "is_featured": true,
+    "is_active": true,
+    "created_at": "2025-12-07T11:39:52.598Z"
+  }
+},
+{
+  "model": "core.productexample",
+  "pk": 11,
+  "fields": {
+    "category": 12,
+    "title": "Branded Standard Umbrella",
+    "description": "Quality umbrella with custom branding. Perfect for corporate gifts and staff appreciation.",
+    "starting_price": "1300.00",
+    "unit_price": "1300.00",
+    "min_quantity": 1,
+    "image": "products/fe6b3271aed7ee641f46af00319804b2.jpg",
+    "is_featured": false,
+    "is_active": true,
+    "created_at": "2025-12-07T11:39:52.615Z"
+  }
+},
+{
+  "model": "core.productexample",
+  "pk": 12,
+  "fields": {
+    "category": 7,
+    "title": "Hoodies",
+    "description": "Basic branded hoodies",
+    "starting_price": "1500.00",
+    "unit_price": "800.00",
+    "min_quantity": 1,
+    "image": "products/f254ba177bcfdcd0301840561d68c349.jpg",
+    "is_featured": true,
+    "is_active": true,
+    "created_at": "2025-12-07T14:06:24.638Z"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2025-12-07T13:15:29.403Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "core",
+      "productexample"
+    ],
+    "object_id": "10",
+    "object_repr": "Polyester Sports Jersey - KSh 1200.00",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Is featured\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2025-12-07T13:15:29.406Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "core",
+      "productexample"
+    ],
+    "object_id": "11",
+    "object_repr": "Branded Standard Umbrella - KSh 1300.00",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Is featured\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2025-12-07T13:15:29.408Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "core",
+      "productexample"
+    ],
+    "object_id": "9",
+    "object_repr": "Plastic Promo Pen Bundle - KSh 3000.00",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Is featured\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2025-12-07T13:37:01.530Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "core",
+      "productexample"
+    ],
+    "object_id": "9",
+    "object_repr": "Plastic Promo Pen Bundle - KSh 3000.00",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Min quantity\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2025-12-07T13:45:29.863Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "core",
+      "productexample"
+    ],
+    "object_id": "9",
+    "object_repr": "Plastic Promo Pen Bundle - KSh 3000.00",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Min quantity\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2025-12-07T13:45:49.499Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "core",
+      "productexample"
+    ],
+    "object_id": "9",
+    "object_repr": "Plastic Promo Pen Bundle - KSh 3000.00",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2025-12-07T13:47:26.907Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "core",
+      "productexample"
+    ],
+    "object_id": "9",
+    "object_repr": "Plastic Promo Pen Bundle - KSh 300",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Starting price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2025-12-07T13:57:51.404Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "core",
+      "productexample"
+    ],
+    "object_id": "7",
+    "object_repr": "Standard Ceramic Mug - KSh 500.00",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2025-12-07T14:01:28.809Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "core",
+      "productexample"
+    ],
+    "object_id": "7",
+    "object_repr": "Standard Ceramic Mug - KSh 500.00",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2025-12-07T14:02:19.589Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "core",
+      "productexample"
+    ],
+    "object_id": "9",
+    "object_repr": "Plastic Promo Pen Bundle - KSh 300.00",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2025-12-07T14:02:41.937Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "core",
+      "productexample"
+    ],
+    "object_id": "6",
+    "object_repr": "Basic Cotton Tee - KSh 600.00",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2025-12-07T14:02:57.189Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "core",
+      "productexample"
+    ],
+    "object_id": "10",
+    "object_repr": "Polyester Sports Jersey - KSh 1200.00",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2025-12-07T14:04:31.929Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "core",
+      "productexample"
+    ],
+    "object_id": "11",
+    "object_repr": "Branded Standard Umbrella - KSh 1300.00",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2025-12-07T14:04:48.438Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "core",
+      "productexample"
+    ],
+    "object_id": "8",
+    "object_repr": "Medium Car Decal - Design & Install - KSh 5000.00",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2025-12-07T14:04:59.041Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "core",
+      "productexample"
+    ],
+    "object_id": "8",
+    "object_repr": "Medium Car Decal - Design & Install - KSh 5000.00",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2025-12-07T14:06:24.639Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "core",
+      "productexample"
+    ],
+    "object_id": "12",
+    "object_repr": "Hoodies - KSh 1500",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2025-12-07T14:55:17.045Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "core",
+      "productexample"
+    ],
+    "object_id": "9",
+    "object_repr": "Plastic Promo Pen Bundle - KSh 300.00",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Is featured\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2025-12-07T15:05:58.669Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "core",
+      "productexample"
+    ],
+    "object_id": "9",
+    "object_repr": "Plastic Promo Pen Bundle - KSh 300.00",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2025-12-07T15:06:33.009Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "core",
+      "productexample"
+    ],
+    "object_id": "11",
+    "object_repr": "Branded Standard Umbrella - KSh 1300.00",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Is featured\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2025-12-07T15:06:33.012Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "core",
+      "productexample"
+    ],
+    "object_id": "9",
+    "object_repr": "Plastic Promo Pen Bundle - KSh 300.00",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Is featured\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2025-12-07T15:07:05.178Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "core",
+      "productexample"
+    ],
+    "object_id": "9",
+    "object_repr": "Plastic Promo Pen Bundle - KSh 300.00",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2025-12-07T15:07:22.114Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "core",
+      "productexample"
+    ],
+    "object_id": "9",
+    "object_repr": "Plastic Promo Pen Bundle - KSh 300.00",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2025-12-07T15:08:21.223Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "core",
+      "productexample"
+    ],
+    "object_id": "9",
+    "object_repr": "Plastic Promo Pen Bundle - KSh 300.00",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Min quantity\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2025-12-07T19:29:58.695Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "core",
+      "productexample"
+    ],
+    "object_id": "12",
+    "object_repr": "Hoodies - KSh 1500.00",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+}
+]
