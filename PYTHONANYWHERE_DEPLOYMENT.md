@@ -48,7 +48,7 @@ pip install -r requirements.txt
 ### Step 5: Configure Virtual Environment
 In the Web tab > Virtualenv section, enter:
 ```
-/home/YourUsername/print_hive_project/venv
+/home/YourUsername/printhive/venv
 ```
 
 ### Step 6: Edit WSGI File
@@ -59,7 +59,7 @@ import os
 import sys
 
 # Add your project directory to the Python path
-path = '/home/YourUsername/print_hive_project'
+path = '/home/YourUsername/printhive'
 if path not in sys.path:
     sys.path.insert(0, path)
 
@@ -94,16 +94,12 @@ application = get_wsgi_application()
 3. Create a new database: `YourUsername$printhive`
 
 ### Step 8: Update WSGI File
-Update the database credentials in the WSGI file:
-- `DB_NAME`: `YourUsername$printhive`
-- `DB_USER`: `YourUsername`
-- `DB_PASSWORD`: (the password you set)
-- `DB_HOST`: `YourUsername.mysql.pythonanywhere-services.com`
+Update the database credentials in the WSGI file with the password you just set.
 
 ### Step 9: Run Migrations
 In the Bash console (with venv activated):
 ```bash
-cd /home/YourUsername/print_hive_project
+cd /home/YourUsername/printhive
 source venv/bin/activate
 python manage.py migrate
 python manage.py createsuperuser
@@ -123,12 +119,12 @@ In the **Web** tab > Static files section, add:
 
 | URL | Directory |
 |-----|-----------|
-| `/static/` | `/home/YourUsername/print_hive_project/staticfiles` |
-| `/media/` | `/home/YourUsername/print_hive_project/media` |
+| `/static/` | `/home/YourUsername/printhive/staticfiles` |
+| `/media/` | `/home/YourUsername/printhive/media` |
 
 ### Step 12: Create Media Directory
 ```bash
-mkdir -p /home/YourUsername/print_hive_project/media
+mkdir -p /home/YourUsername/printhive/media
 ```
 
 ---
