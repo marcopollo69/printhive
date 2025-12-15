@@ -1,0 +1,369 @@
+[
+{
+  "model": "core.servicecategory",
+  "pk": 7,
+  "fields": {
+    "name": "Custom T-Shirts & Apparel",
+    "slug": "custom-t-shirts-apparel",
+    "description": "High-quality custom prints on t-shirts, polo shirts, and hoodies for teams, businesses, and events.",
+    "icon_class": "layers",
+    "order": 1,
+    "is_active": true
+  }
+},
+{
+  "model": "core.servicecategory",
+  "pk": 8,
+  "fields": {
+    "name": "Promotional Mugs & Drinkware",
+    "slug": "promotional-mugs-drinkware",
+    "description": "Full-color sublimation printing on ceramic mugs for corporate gifts, events, and personal use.",
+    "icon_class": "coffee",
+    "order": 2,
+    "is_active": true
+  }
+},
+{
+  "model": "core.servicecategory",
+  "pk": 9,
+  "fields": {
+    "name": "Branded Pens & Giveaways",
+    "slug": "branded-pens-giveaways",
+    "description": "Affordable branded pens, keychains, and small gift items for high-volume marketing campaigns.",
+    "icon_class": "edit-3",
+    "order": 3,
+    "is_active": true
+  }
+},
+{
+  "model": "core.servicecategory",
+  "pk": 10,
+  "fields": {
+    "name": "Event & Sports Jerseys",
+    "slug": "event-sports-jerseys",
+    "description": "Custom printing, numbering, and player names on dry-fit/polyester sports jerseys for teams and tournaments.",
+    "icon_class": "award",
+    "order": 4,
+    "is_active": true
+  }
+},
+{
+  "model": "core.servicecategory",
+  "pk": 11,
+  "fields": {
+    "name": "Vehicle & Boda Boda Decals",
+    "slug": "vehicle-boda-boda-decals",
+    "description": "Durable vinyl decals and stickers for car doors, windows, and motorcycle (boda boda) fleet branding.",
+    "icon_class": "truck",
+    "order": 5,
+    "is_active": true
+  }
+},
+{
+  "model": "core.servicecategory",
+  "pk": 12,
+  "fields": {
+    "name": "Corporate Gifts (Umbrellas, etc.)",
+    "slug": "corporate-gifts-umbrellas-etc",
+    "description": "Branded umbrellas, notebooks, and premium gift sets for corporate clients and staff appreciation.",
+    "icon_class": "gift",
+    "order": 6,
+    "is_active": true
+  }
+},
+{
+  "model": "core.productexample",
+  "pk": 6,
+  "fields": {
+    "category": 7,
+    "title": "Basic Cotton Tee",
+    "description": "Quality cotton t-shirt with custom heat-press print. Perfect for teams, events, and promotions.",
+    "starting_price": "600.00",
+    "unit_price": "600.00",
+    "min_quantity": 1,
+    "image": "products/0c2356d9f738f780286bf0fdff4e82c1.jpg",
+    "is_featured": true,
+    "is_active": true,
+    "created_at": "2025-12-07T11:39:52.529"
+  }
+},
+{
+  "model": "core.productexample",
+  "pk": 7,
+  "fields": {
+    "category": 8,
+    "title": "Standard Ceramic Mug",
+    "description": "Full-color sublimation printed ceramic mug. Great for corporate gifts and events.",
+    "starting_price": "500.00",
+    "unit_price": "500.00",
+    "min_quantity": 1,
+    "image": "products/mug_sample.jpg",
+    "is_featured": true,
+    "is_active": true,
+    "created_at": "2025-12-07T11:39:52.553"
+  }
+},
+{
+  "model": "core.productexample",
+  "pk": 8,
+  "fields": {
+    "category": 11,
+    "title": "Medium Car Decal - Design & Install",
+    "description": "Professional vinyl decal design and installation for car doors or windows.",
+    "starting_price": "5000.00",
+    "unit_price": "5000.00",
+    "min_quantity": 1,
+    "image": "products/98948332deeacfcbfa78080ef22fad41.jpg",
+    "is_featured": true,
+    "is_active": true,
+    "created_at": "2025-12-07T11:39:52.569"
+  }
+},
+{
+  "model": "core.productexample",
+  "pk": 9,
+  "fields": {
+    "category": 9,
+    "title": "Plastic Promo Pen Bundle",
+    "description": "High-volume branded ballpoint pens for marketing campaigns and events.",
+    "starting_price": "300.00",
+    "unit_price": "60.00",
+    "min_quantity": 5,
+    "image": "products/89b3dafbdb7ad7d5bbefcb4b25d154d6.jpg",
+    "is_featured": true,
+    "is_active": true,
+    "created_at": "2025-12-07T11:39:52.583"
+  }
+},
+{
+  "model": "core.productexample",
+  "pk": 10,
+  "fields": {
+    "category": 10,
+    "title": "Polyester Sports Jersey",
+    "description": "Custom dry-fit jersey with printing, numbering, and player names.",
+    "starting_price": "1200.00",
+    "unit_price": "1200.00",
+    "min_quantity": 1,
+    "image": "products/b3e3198a855167a7610713fc5aefe92f.jpg",
+    "is_featured": true,
+    "is_active": true,
+    "created_at": "2025-12-07T11:39:52.598"
+  }
+},
+{
+  "model": "core.productexample",
+  "pk": 11,
+  "fields": {
+    "category": 12,
+    "title": "Branded Standard Umbrella",
+    "description": "Quality umbrella with custom branding. Perfect for corporate gifts and staff appreciation.",
+    "starting_price": "1300.00",
+    "unit_price": "1300.00",
+    "min_quantity": 1,
+    "image": "products/0b465560b49250c2b83aed9d78381b10.jpg",
+    "is_featured": true,
+    "is_active": true,
+    "created_at": "2025-12-07T11:39:52.615"
+  }
+},
+{
+  "model": "core.productexample",
+  "pk": 12,
+  "fields": {
+    "category": 7,
+    "title": "Hoodies",
+    "description": "Basic branded hoodies",
+    "starting_price": "1500.00",
+    "unit_price": "1500.00",
+    "min_quantity": 1,
+    "image": "products/f254ba177bcfdcd0301840561d68c349.jpg",
+    "is_featured": true,
+    "is_active": true,
+    "created_at": "2025-12-07T14:06:24.638"
+  }
+},
+{
+  "model": "core.productexample",
+  "pk": 13,
+  "fields": {
+    "category": 8,
+    "title": "Mug + Flask (combo)",
+    "description": "Quality top-notch Barcelona mug and flask at a decent price",
+    "starting_price": "1000.00",
+    "unit_price": "1500.00",
+    "min_quantity": 1,
+    "image": "products/209e50e86c81bb67c6295786a714ae75.jpg",
+    "is_featured": true,
+    "is_active": true,
+    "created_at": "2025-12-09T08:02:41.123"
+  }
+},
+{
+  "model": "core.customerinquiry",
+  "pk": 1,
+  "fields": {
+    "name": "Mark Brown",
+    "phone": "0746336276",
+    "email": "kmarc254@gmail.com",
+    "company": "Prints by Marco",
+    "service_needed": 7,
+    "message": "I would like you to custom brand the following products for my company",
+    "submitted_on": "2025-12-07T21:29:28.939",
+    "status": "contacted"
+  }
+},
+{
+  "model": "core.customerinquiry",
+  "pk": 2,
+  "fields": {
+    "name": "Test User",
+    "phone": "0712345678",
+    "email": "test@example.com",
+    "company": "",
+    "service_needed": 11,
+    "message": "This is a test inquiry.",
+    "submitted_on": "2025-12-07T21:33:59.667",
+    "status": "new"
+  }
+},
+{
+  "model": "core.customerinquiry",
+  "pk": 3,
+  "fields": {
+    "name": "Mark Brown",
+    "phone": "0746336276",
+    "email": "kmarc254@gmail.com",
+    "company": "Prints by Marco",
+    "service_needed": 7,
+    "message": "I would like you to custom brand the following products for my company",
+    "submitted_on": "2025-12-07T21:39:19.033",
+    "status": "closed"
+  }
+},
+{
+  "model": "core.customerinquiry",
+  "pk": 5,
+  "fields": {
+    "name": "John Doe",
+    "phone": "0712345678",
+    "email": "John@gmail.com",
+    "company": "DJ",
+    "service_needed": 8,
+    "message": "Design and print my logo onto 5 mugs",
+    "submitted_on": "2025-12-09T11:47:05.167",
+    "status": "new"
+  }
+},
+{
+  "model": "core.customerinquiry",
+  "pk": 6,
+  "fields": {
+    "name": "Mark Brown",
+    "phone": "0746336276",
+    "email": "kmarc254@gmail.com",
+    "company": "Xculture",
+    "service_needed": 10,
+    "message": "50 events",
+    "submitted_on": "2025-12-09T20:20:32.997",
+    "status": "new"
+  }
+},
+{
+  "model": "core.customerinquiry",
+  "pk": 7,
+  "fields": {
+    "name": "Carmell Slaughter",
+    "phone": "0716026108",
+    "email": "youngwriters2001@gmail.com",
+    "company": "",
+    "service_needed": null,
+    "message": "FFF",
+    "submitted_on": "2025-12-10T02:51:15.041",
+    "status": "new"
+  }
+},
+{
+  "model": "core.quoterequest",
+  "pk": 2,
+  "fields": {
+    "inquiry": 2,
+    "specifications_file": "",
+    "estimated_price": null,
+    "notes": "",
+    "follow_up_date": null,
+    "created_at": "2025-12-07T21:33:59.676",
+    "updated_at": "2025-12-07T21:33:59.676"
+  }
+},
+{
+  "model": "core.quoterequest",
+  "pk": 3,
+  "fields": {
+    "inquiry": 3,
+    "specifications_file": "specifications/1c8bd8dd3770b0b2fb181dc008f0922c_MyGNckd.jpg",
+    "estimated_price": "5000.00",
+    "notes": "",
+    "follow_up_date": "2025-12-25",
+    "created_at": "2025-12-07T21:39:19.042",
+    "updated_at": "2025-12-09T13:38:29.715"
+  }
+},
+{
+  "model": "core.quoterequest",
+  "pk": 5,
+  "fields": {
+    "inquiry": 5,
+    "specifications_file": "specifications/logo_-_Edited_I4h4zcb.png",
+    "estimated_price": null,
+    "notes": "",
+    "follow_up_date": null,
+    "created_at": "2025-12-09T11:47:05.176",
+    "updated_at": "2025-12-09T11:47:05.181"
+  }
+},
+{
+  "model": "core.quoterequest",
+  "pk": 6,
+  "fields": {
+    "inquiry": 6,
+    "specifications_file": "",
+    "estimated_price": null,
+    "notes": "",
+    "follow_up_date": null,
+    "created_at": "2025-12-09T20:20:33.007",
+    "updated_at": "2025-12-09T20:20:33.007"
+  }
+},
+{
+  "model": "core.quoterequest",
+  "pk": 7,
+  "fields": {
+    "inquiry": 7,
+    "specifications_file": "",
+    "estimated_price": null,
+    "notes": "",
+    "follow_up_date": null,
+    "created_at": "2025-12-10T02:51:15.052",
+    "updated_at": "2025-12-10T02:51:15.052"
+  }
+},
+{
+  "model": "core.pricingtier",
+  "pk": 1,
+  "fields": {
+    "min_quantity": 50,
+    "discount_percentage": "5.00",
+    "is_active": true
+  }
+},
+{
+  "model": "core.pricingtier",
+  "pk": 2,
+  "fields": {
+    "min_quantity": 200,
+    "discount_percentage": "10.00",
+    "is_active": true
+  }
+}
+]
