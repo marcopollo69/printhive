@@ -4,7 +4,7 @@ from decimal import Decimal
 from django.core.mail import send_mail
 from django.conf import settings
 from django.contrib import messages
-from .models import ServiceCategory, ProductExample, CustomerInquiry, QuoteRequest, PricingTier
+from .models import ServiceCategory, ProductExample, CustomerInquiry, QuoteRequest, PricingTier, CarouselImage
 from .forms import CustomerInquiryForm
 
 
